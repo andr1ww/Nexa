@@ -6,7 +6,7 @@ export default function (app: Hono) {
   app.get("/content/api/pages/fortnite-game", async (c) => {
     const version = getVersion(c);
     const game: any = await axios.get(
-      "https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game"
+      "https://fortnitecontent-website-prod07.ol.epicgames.com/content/api/pages/fortnite-game",
     );
     let content: any = game.data;
 
@@ -99,7 +99,7 @@ export default function (app: Hono) {
           lastModified: "2021-02-10T23:57:48.837Z",
           _locale: "en-US",
         },
-      }
+      },
     );
 
     if (version.build == 7.4) {
@@ -108,10 +108,10 @@ export default function (app: Hono) {
       for (let i = 0; i < playlist.length; i++) {
         if (
           playlist[i].image ===
-          "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
+            "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
           playlist[i].playlist_name === "Playlist_Music_High" &&
           playlist[i].description ===
-          "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
+            "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
           playlist[i].display_name === "Travis Scott’s Astronomical"
         ) {
           playlist[i].image = "https://i.imgur.com/3xoXe4R.png";
@@ -128,10 +128,10 @@ export default function (app: Hono) {
       for (let i = 0; i < playlist.length; i++) {
         if (
           playlist[i].image ===
-          "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
+            "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
           playlist[i].playlist_name === "Playlist_Music_High" &&
           playlist[i].description ===
-          "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
+            "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
           playlist[i].display_name === "Travis Scott’s Astronomical"
         ) {
           playlist[i].image =
@@ -148,10 +148,10 @@ export default function (app: Hono) {
       for (let i = 0; i < playlist.length; i++) {
         if (
           playlist[i].image ===
-          "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
+            "https://cdn2.unrealengine.com/Fortnite/fortnite-game/playlistinformation/v12/12BR_Cyclone_Astronomical_PlaylistTile_Main-1024x512-ab95f8d30d0742ba1759403320a08e4ea6f0faa0.jpg" &&
           playlist[i].playlist_name === "Playlist_Music_High" &&
           playlist[i].description ===
-          "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
+            "Drop into Sweaty Sands for the ride of your life. (Photosensitivity Warning)" &&
           playlist[i].display_name === "Travis Scott’s Astronomical"
         ) {
           playlist[i].image =
@@ -261,7 +261,7 @@ export default function (app: Hono) {
         content.dynamicbackgrounds.backgrounds.backgrounds[0].backgroundimage =
           "https://cdn2.unrealengine.com/t-bp23-lobby-2048x1024-2048x1024-26f2c1b27f63.png";
         content.dynamicbackgrounds.backgrounds.backgrounds[0].stage =
-          "defaultnotris";
+          "season2300";
       }
     } else if (version.season === 24) {
       content.dynamicbackgrounds.backgrounds.backgrounds[0].stage =
